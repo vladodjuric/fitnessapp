@@ -14,7 +14,6 @@ function LoginPage({ navigation }) {
         password,
       });
       localStorage.setItem("token", response.data.token);
-      // const userName = response.data.user.username;
       navigation.navigate("LandingPage", { username });
     } catch (error) {
       console.error(error);
