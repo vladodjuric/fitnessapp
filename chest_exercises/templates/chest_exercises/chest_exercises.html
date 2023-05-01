@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+{% block content %}
+<h1>Chest Exercises</h1>
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Duration (Seconds)</th>
+            <th>Sets</th>
+            <th>Difficulty</th>
+            <th>Category</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for exercise in exercises %}
+        <tr>
+            <td>{{ exercise.name }}</td>
+            <td>{{ exercise.duration_seconds }}</td>
+            <td>{{ exercise.sets }}</td>
+            <td>{{ exercise.difficulty }}</td>
+            <td>{{ exercise.category }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
+
+</html>
